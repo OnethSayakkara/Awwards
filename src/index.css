@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MadeforText';
+  src: url('./assets/fonts/madefor-text.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.ultra-thin-border{
+ border-top-width: 0.1px;
+ border-bottom-width: 0.1px;
+}
+
+.font-size {
+   font-size: 0.85rem /* 12px */;
+    line-height: 1rem /* 16px */;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -100%;
+  }
+}
+
+.scroll-item {
+  position: absolute;
+  white-space: nowrap;
+  animation-name: scrollLeft;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  left: max(calc(100% * 8), 100%);
+}
+
+.scroll-item:nth-child(1) { animation-delay: calc(100s / 8 * (8 - 1) * -1); }
+.scroll-item:nth-child(2) { animation-delay: calc(100s / 8 * (8 - 2) * -1); }
+.scroll-item:nth-child(3) { animation-delay: calc(100s / 8 * (8 - 3) * -1); }
+.scroll-item:nth-child(4) { animation-delay: calc(100s / 8 * (8 - 4) * -1); }
+.scroll-item:nth-child(5) { animation-delay: calc(100s / 8 * (8 - 5) * -1); }
+.scroll-item:nth-child(6) { animation-delay: calc(100s / 8 * (8 - 6) * -1); }
+.scroll-item:nth-child(7) { animation-delay: calc(100s / 8 * (8 - 7) * -1); }
+.scroll-item:nth-child(8) { animation-delay: calc(100s / 8 * (8 - 8) * -1); }
