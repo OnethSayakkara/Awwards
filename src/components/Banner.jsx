@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import eyeAnimation from '../assets/animations/e2.json';
 import Lottie from 'lottie-react';
 import { BsEmojiSmile } from "react-icons/bs";
+import { FiPlus } from "react-icons/fi";
 
 function Banner() {
  const [timeStr, setTimeStr] = useState('');
@@ -43,6 +44,10 @@ function Banner() {
              <div className="w-[1369px]  bg-darkgray text-white text-[0.55rem] py-1 px-3 font-madefor">
                 {timeStr} CEST
             </div>
+            <div className='w-fit flex items-center justify-center ml-[2px]'>
+            <FiPlus />
+            </div>
+            
 
         </div>
             </div>
@@ -69,6 +74,7 @@ function Banner() {
         </div>
       ))}
     </div>
+    <div className="absolute bottom-5 left-0 w-full border-t border-black scale-y-[0.2]"></div>
       </div>
     </section>
   );
