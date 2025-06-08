@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Route, Routes } from 'react-router-dom';
+import Aboutme from './components/Aboutme';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,11 +51,15 @@ function App() {
           </svg>
         </div>
       )}
-      <main className="min-h-screen bg-lightgray overflow-y-auto scrollbar-none">
+      <Routes>
+        <Route path='/' element={<main className="min-h-screen bg-lightgray overflow-y-auto scrollbar-none">
         <Header />
         <Hero />
         <Banner />
-      </main>
+      </main>}/>
+      <Route path='/about' element={<Aboutme/>}/>
+      
+      </Routes>
     </>
   );
 }

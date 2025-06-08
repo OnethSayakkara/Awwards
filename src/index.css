@@ -66,3 +66,18 @@
   background: #ff2000; /* ash color */
   overflow: hidden;
 }
+
+@layer utilities {
+  .bg-fill-hover {
+    @apply relative;
+  }
+
+  .bg-fill-hover::before {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0 bg-bordergray transition-all duration-300 ease-in-out;
+  }
+
+  .bg-fill-hover:hover::before {
+    @apply h-full;
+  }
+}
