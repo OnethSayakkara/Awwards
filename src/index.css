@@ -46,6 +46,21 @@
 .scroll-item:nth-child(7) { animation-delay: calc(130s / 8 * (8 - 7) * -1); }
 .scroll-item:nth-child(8) { animation-delay: calc(130s / 8 * (8 - 8) * -1); }
 
+.scroll-about p {
+  white-space: nowrap;
+  animation: move-rtl 50000ms linear infinite;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 @keyframes sprite {
   from {
