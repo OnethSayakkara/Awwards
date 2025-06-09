@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Route, Routes } from 'react-router-dom';
 import Aboutme from './components/Aboutme';
+import Whoami from './components/Whoami';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className='bg-lightgray'>
       {isLoading && (
         <div className="fixed inset-0 flex items-center justify-center bg-transparent z-50">
           <svg
@@ -52,15 +53,20 @@ function App() {
         </div>
       )}
       <Routes>
-        <Route path='/' element={<main className="min-h-screen bg-lightgray overflow-y-auto scrollbar-none">
+        <Route path='/' element={<main className="min-h-screen overflow-y-auto scrollbar-none">
         <Header />
         <Hero />
         <Banner />
       </main>}/>
-      <Route path='/about' element={<Aboutme/>}/>
+      <Route path='/about' element={
+        <div>
+        <Header/>
+        <Aboutme/>
+        <Whoami/>
+      </div>}/>
       
       </Routes>
-    </>
+    </div>
   );
 }
 

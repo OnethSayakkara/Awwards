@@ -4,13 +4,13 @@ import { GoArrowDownRight } from 'react-icons/go';
 import eyeAnimation from '../assets/animations/e2.json';
 import Lottie from 'lottie-react';
 import { IoMapOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Aboutme = () => {
   return (
     <div className='bg-lightgray'>
-      <Header />
       <section>
-        <div className="relative h-[800px]"> {/* Increased height to accommodate all content */}
+        <div className="relative h-[672px]"> {/* Increased height to accommodate all content */}
           <div className="absolute left-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />
           <div className="absolute right-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />
           <div className='relative h-[190px]'>
@@ -47,17 +47,23 @@ const Aboutme = () => {
               <div className='flex flex-row gap-10'>
                 
                 <div className='flex flex-col w-[54%] font-madefor font-medium text-[0.75rem]'>
-                  <button className='h-[70px] border-b border-r border-black/20 uppercase hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover'>
-                    <span className="relative z-10">who am i</span>
-                  </button>
-                  <button className='h-[70px] border-r border-b border-black/20 uppercase hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover'>
-                    <span className="relative z-10">my approach</span>
-                  </button>
-                  <button className='h-[70px] border-r uppercase border-black/20 hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover'>
-                    <span className="relative z-10">beyond the screen</span>
-                  </button>
-                  
-                </div>
+  <a
+    href='#whoami'
+    className='flex h-[70px] border-b border-r border-black/20 uppercase hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover text-center items-center justify-center'
+  >
+    <span className="relative z-10">who am i</span>
+  </a>
+  <button
+    className='flex h-[70px] border-r border-b border-black/20 uppercase hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover text-center items-center justify-center'
+  >
+    <span className="relative z-10">my approach</span>
+  </button>
+  <button
+    className='flex h-[70px] border-r uppercase border-black/20 hover:tracking-[0.5rem] transition-[letter-spacing] duration-300 ease-in-out bg-fill-hover text-center items-center justify-center'
+  >
+    <span className="relative z-10">beyond the screen</span>
+  </button>
+</div>
                 <div className='font-madefor text-xs text-brightred mt-36'>
                   <p>ALWAYS UP FOR A GAME OF ANY SPORT<br />
                     BUT FOOTBALL IS HIS TRUE PASSION<br />
