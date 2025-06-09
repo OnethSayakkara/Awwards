@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { Route, Routes } from 'react-router-dom';
 import Aboutme from './components/Aboutme';
 import Whoami from './components/Whoami';
+import Motherland from './components/Motherland';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,6 +64,7 @@ function App() {
         <Header/>
         <Aboutme/>
         <Whoami/>
+        <Motherland/>
       </div>}/>
       
       </Routes>
