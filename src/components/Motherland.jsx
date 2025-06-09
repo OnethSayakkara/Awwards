@@ -17,6 +17,7 @@ function Motherland  ()  {
         <img src={sl} alt='man' className='absolute top-28 left-[30%] w-[562px]'/>
         <FaLocationDot className='absolute bottom-[8.8rem] text-brightred text-4xl left-[40rem]'/>
         <div className="absolute bottom-5 left-0 w-full border-t border-black scale-y-[0.2]"></div>
+        <div className="absolute bottom-0 left-0 w-full border-t border-black scale-y-[0.2]"></div>
 
         </div>
     </section>

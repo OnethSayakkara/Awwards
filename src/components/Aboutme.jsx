@@ -77,7 +77,7 @@ const Aboutme = () => {
               <div className="relative left-0 right-0  h-[255px] flex items-center">
                 
                 <div 
-                 className="scroll-about text-[9.4rem] uppercase font-madefor font-medium text-black flex items-center">
+                 className="scroll-about text-[9.4rem] uppercase font-madefor font-medium text-darkgray flex items-center">
                   <p className="flex flex-row items-center justify-center w-full gap-8">
                     about me
                     <IoMapOutline className="text-brightred text-4xl mx-4" />

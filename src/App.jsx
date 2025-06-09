@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import Aboutme from './components/Aboutme';
 import Whoami from './components/Whoami';
 import Motherland from './components/Motherland';
+import BannerTwo from './components/BannerTwo';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -65,6 +66,7 @@ function App() {
         <Aboutme/>
         <Whoami/>
         <Motherland/>
+        <BannerTwo/>
       </div>}/>
       
       </Routes>

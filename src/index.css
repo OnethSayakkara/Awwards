@@ -61,6 +61,22 @@
 }
 
 
+.scroll-process p {
+  white-space: nowrap;
+  animation: move-ltr 95000ms linear infinite;
+}
+
+@keyframes move-ltr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
 
 @keyframes sprite {
   from {
