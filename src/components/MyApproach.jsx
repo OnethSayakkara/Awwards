@@ -3,7 +3,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 function MyApproach  ()  {
   return (
-    <section>
+    <section id='myapproach'>
         <div className='relative h-[570px]'>
         <div className="absolute left-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />
         <div className="absolute left-[75px] top-0 h-full w-px bg-black scale-x-[0.2]" />
@@ -18,11 +18,12 @@ function MyApproach  ()  {
         </div>
         <div className='absolute flex flex-row left-28 bottom-5 text-brightred  justify-between uppercase font-madefor'>
             <IoIosArrowRoundForward className='text-4xl'/>
-            <p className='text-2xl'>see my work</p>
+            
         </div>
+        <p className='absolute text-2xl right-24 text-brightred uppercase bottom-5'>see my work</p>
 
 
-
+        <div className="absolute bottom-0 left-0 w-full border-t border-black scale-y-[0.2]"/>
 
         </div>
     </section>

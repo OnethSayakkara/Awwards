@@ -10,6 +10,8 @@ import Whoami from './components/Whoami';
 import Motherland from './components/Motherland';
 import BannerTwo from './components/BannerTwo';
 import MyApproach from './components/MyApproach';
+import BannerThree from './components/BannerThree';
+import BeyondtheScreen from './components/BeyondtheScreen';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -69,6 +71,8 @@ function App() {
         <Motherland/>
         <BannerTwo/>
         <MyApproach/>
+        <BannerThree/>
+        <BeyondtheScreen/>
       </div>}/>
       
       </Routes>
