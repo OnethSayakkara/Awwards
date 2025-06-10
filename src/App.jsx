@@ -9,6 +9,7 @@ import Aboutme from './components/Aboutme';
 import Whoami from './components/Whoami';
 import Motherland from './components/Motherland';
 import BannerTwo from './components/BannerTwo';
+import MyApproach from './components/MyApproach';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -67,6 +68,7 @@ function App() {
         <Whoami/>
         <Motherland/>
         <BannerTwo/>
+        <MyApproach/>
       </div>}/>
       
       </Routes>
