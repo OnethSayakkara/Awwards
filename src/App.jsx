@@ -12,6 +12,8 @@ import BannerTwo from './components/BannerTwo';
 import MyApproach from './components/MyApproach';
 import BannerThree from './components/BannerThree';
 import BeyondtheScreen from './components/BeyondtheScreen';
+import BannerFour from './components/BannerFour';
+import Footer from './components/Footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -73,6 +75,8 @@ function App() {
         <MyApproach/>
         <BannerThree/>
         <BeyondtheScreen/>
+        <BannerFour/>
+        <Footer/>
       </div>}/>
       
       </Routes>

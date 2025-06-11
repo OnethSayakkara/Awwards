@@ -36,7 +36,21 @@ function Banner() {
         {/* Horizontal line */}
         
            
-darkgray
+        <div className="absolute left-0 w-full border-b border-black/25">
+        <div className='flex flex-row'>
+            <div className='justify-center items-center bg-brightred w-fit left-10 ml-14'>
+             <Lottie animationData={eyeAnimation} loop={true}  className="w-[20px]" />
+             </div>
+             <div className="w-[1369px]  bg-darkgray text-white text-[0.55rem] py-1 px-3 font-madefor">
+                {timeStr} CEST
+            </div>
+            <div className='w-fit flex items-center justify-center ml-[2px]'>
+            <FiPlus />
+            </div>
+            
+
+        </div>
+            </div>
 
         {/* Left vertical line crossing the horizontal line */}
         <div className="absolute left-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />

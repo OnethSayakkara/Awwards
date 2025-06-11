@@ -38,11 +38,11 @@ function Header() {
             <p className='text-mediumgray py-1'>Navigate</p>
             <div className='space-x-1'>
             <a href="#about" className="hover:text-black transition">Projects,</a>
-            <a href="#example" className="hover:text-black transition">About,</a>
+            <a href="/about" className="hover:text-black transition">About,</a>
             </div>
             <div className='space-x-1'>
             <a href="#about" className="hover:text-black transition">Resources,</a>
-            <a href="#example" className="hover:text-black transition">Contact</a>
+            <a href="" className="hover:text-black transition">Contact</a>
             </div>
           </nav>
           </div>
