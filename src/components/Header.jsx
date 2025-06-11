@@ -37,7 +37,7 @@ function Header() {
           <nav className="font-size text-darkgray font-madefor spcae-y-2">
             <p className='text-mediumgray py-1'>Navigate</p>
             <div className='space-x-1'>
-            <a href="#about" className="hover:text-black transition">Projects,</a>
+            <a href="/projects" className="hover:text-black transition">Projects,</a>
             <a href="/about" className="hover:text-black transition">About,</a>
             </div>
             <div className='space-x-1'>

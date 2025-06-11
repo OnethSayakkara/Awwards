@@ -14,6 +14,7 @@ import BannerThree from './components/BannerThree';
 import BeyondtheScreen from './components/BeyondtheScreen';
 import BannerFour from './components/BannerFour';
 import Footer from './components/Footer';
+import ProjectsI9Intro from './components/ProjectsI9Intro';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,6 +79,15 @@ function App() {
         <BannerFour/>
         <Footer/>
       </div>}/>
+
+      <Route path='/projects' element={
+        <div>
+          <Header/>
+          <ProjectsI9Intro/>
+
+
+        </div>
+      }/>
       
       </Routes>
     </div>
