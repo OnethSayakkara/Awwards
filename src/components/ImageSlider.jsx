@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { PiStarFourFill } from "react-icons/pi";
 
 const images = [
   '/src/assets/img/1.png',
@@ -39,7 +40,7 @@ export default function InfiniteImageSlider() {
   const smoothScroll = (element, delta) => {
     const start = element.scrollLeft;
     const end = start + delta;
-    const duration = 4000;
+    const duration = 400;
     const startTime = performance.now();
 
     const animateScroll = (currentTime) => {
@@ -110,21 +111,38 @@ export default function InfiniteImageSlider() {
                   />
                   {/* View Button */}
                   {hoveredIndex === idx && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300">
-                      <button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6 py-7 font-medium font-madefor transition-all duration-200 transform hover:scale-105">
-                        View
-                      </button>
-                    </div>
+                     <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+    <button className="bg-brightred text-white rounded-full px-7 py-8 text-lg font-madefor transition-transform duration-[4000ms] ">
+      View
+    </button>
+  </div>
                   )}
                 </div>
               </div>
             ))}
           </div>
+          
         </div>
+        <div className="absolute left-0 bottom-0 w-full border-b border-t border-black/25">
+        <div className='flex flex-row'>
+            <div className='justify-center items-center w-fit left-10 ml-14 text-center text-sm font-madefor py-1'>
+           <PiStarFourFill className='w-[20px]'/>
+             </div>
+             <div className="w-[1390px]  text-darkgray text-[0.55rem] py-1 px-5 font-madefor uppercase">
+                offrings — services
+            </div>
+            <div className='w-fit flex items-center justify-center ml-[2px]'>
+            
+            </div>
+            
+
+        </div>
+            </div>
 
         {/* Right Lines */}
         <div className="absolute right-[75px] top-0 h-full w-px bg-black scale-x-[0.2]" />
         <div className="absolute right-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />
+                
       </section>
     </>
   );
