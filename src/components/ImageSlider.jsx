@@ -16,6 +16,7 @@ export default function InfiniteImageSlider() {
 
   const sliderRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -25,7 +26,7 @@ export default function InfiniteImageSlider() {
     const handleWheel = (e) => {
       e.preventDefault();
       setIsScrolling(true);
-      slider.scrollLeft += e.deltaY;
+      smoothScroll(slider, e.deltaY);
     };
 
     slider.addEventListener('wheel', handleWheel, { passive: false });
@@ -34,6 +35,29 @@ export default function InfiniteImageSlider() {
       slider.removeEventListener('wheel', handleWheel);
     };
   }, []);
+
+  const smoothScroll = (element, delta) => {
+    const start = element.scrollLeft;
+    const end = start + delta;
+    const duration = 4000;
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+      element.scrollLeft = start + (end - start) * easeInOutQuad(progress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        setIsScrolling(false);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
 
   useEffect(() => {
     if (isScrolling) {
@@ -62,7 +86,7 @@ export default function InfiniteImageSlider() {
         <div className="w-full max-w-[calc(100%-150px)] mx-auto overflow-hidden">
           <div
             ref={sliderRef}
-            className={`flex gap-6 transition-transform duration-300  overflow-x-hidden ${
+            className={`flex gap-6 transition-transform duration-300 overflow-x-hidden ${
               isScrolling ? 'scale-[0.95]' : 'scale-100'
             }`}
             style={{
@@ -71,14 +95,27 @@ export default function InfiniteImageSlider() {
             }}
           >
             {[...images, ...images].map((src, idx) => (
-              <div key={idx} className="border-darkgray/10 border-[0.2px] px-10 py-7 flex-shrink-0">
-                <div className="w-[370px] h-[270px] px-5 bg-darkgray flex items-center justify-center">
+              <div 
+                key={idx} 
+                className="border-darkgray/10 border-[0.2px] px-10 py-7 flex-shrink-0 relative group"
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <div className="w-[370px] h-[270px] px-5 bg-darkgray flex items-center justify-center relative">
                   <img
                     src={src}
                     alt={`slider-img-${idx}`}
                     className="max-w-full max-h-full object-contain"
                     loading="lazy"
                   />
+                  {/* View Button */}
+                  {hoveredIndex === idx && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300">
+                      <button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6 py-7 font-medium font-madefor transition-all duration-200 transform hover:scale-105">
+                        View
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
