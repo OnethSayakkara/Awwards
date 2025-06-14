@@ -15,6 +15,7 @@ import BeyondtheScreen from './components/BeyondtheScreen';
 import BannerFour from './components/BannerFour';
 import Footer from './components/Footer';
 import ProjectsI9Intro from './components/ProjectsI9Intro';
+import ImageSlider from './components/ImageSlider';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -84,6 +85,7 @@ function App() {
         <div>
           <Header/>
           <ProjectsI9Intro/>
+          <ImageSlider/>
 
 
         </div>

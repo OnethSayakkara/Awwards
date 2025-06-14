@@ -28,8 +28,11 @@ function ProjectsI9Intro  ()  {
                 <div className="justify-center items-center bg-brightred w-fit left-10 ml-14">
                   <Lottie animationData={eyeAnimation} loop={true} className="w-[20px]" />
                 </div>
-                <div className="w-[1405px] bg-darkgray text-white text-[0.55rem] py-1 px-5 font-madefor uppercase">
-                  projects 24' - 25'
+                <div className="w-[1405px] flex flex-row gap-[690px] bg-darkgray text-white text-[0.55rem] py-1 px-5 font-madefor uppercase">
+                  <p>projects 24' - 25'</p>
+                  <div>
+                    <p>scroll</p>
+                  </div>
                 </div>
                 <div className="w-fit flex items-center justify-center ml-[2px]"></div>
               </div>
