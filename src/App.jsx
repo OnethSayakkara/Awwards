@@ -18,6 +18,9 @@ import ProjectsI9Intro from './components/ProjectsI9Intro';
 import ImageSlider from './components/ImageSlider';
 import BannerFive from './components/BannerFive';
 import ProjectsectionTwo from './components/ProjectsectionTwo';
+import BannerRemake from './components/BannerRemake';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import { LuPackageOpen } from "react-icons/lu";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -90,6 +93,13 @@ function App() {
           <ImageSlider/>
           <BannerFive/>
           <ProjectsectionTwo/>
+          <BannerRemake text="full package"
+          footerText="start to launch"
+          footerLeft={IoIosArrowRoundForward}
+          direction="left"
+          topIcon={LuPackageOpen}
+          />
+
 
 
         </div>
