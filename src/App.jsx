@@ -22,6 +22,7 @@ import BannerRemake from './components/BannerRemake';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { LuPackageOpen } from "react-icons/lu";
 import ProjectSectionThree from './components/ProjectSectionThree';
+import AboutSection from './components/AboutSection';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -73,19 +74,7 @@ function App() {
         <Hero />
         <Banner />
       </main>}/>
-      <Route path='/about' element={
-        <div>
-        <Header/>
-        <Aboutme/>
-        <Whoami/>
-        <Motherland/>
-        <BannerTwo/>
-        <MyApproach/>
-        <BannerThree/>
-        <BeyondtheScreen/>
-        <BannerFour/>
-        <Footer/>
-      </div>}/>
+      <Route path='/about' element={<AboutSection/>}/>
 
       <Route path='/projects' element={
         <div>
