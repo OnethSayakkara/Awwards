@@ -16,13 +16,26 @@ const Aboutme = () => {
           <div className='relative h-[190px]'>
             <div className="absolute bottom-2 left-24">
               <GoArrowDownRight className="text-brightred mb-2" />
-              <div className="flex flex-row text-brightred font-madefor text-sm gap-[36.1rem] text-[0.8rem]">
-                <p className="cursor-pointer">onethsayakkara@gmail.com</p>
-                <div className="uppercase text-[0.6rem] font-semibold text-darkneutral -space-y-2">
-                  <p>a bit about me and</p>
-                  <p>how can i support you</p>
-                </div>
-              </div>
+<div className="flex flex-row text-brightred font-madefor text-sm gap-[36.1rem] text-[0.8rem] group">
+  <div className="relative h-[20px] overflow-hidden group">
+  {/* Default state */}
+  <div className="transition duration-500 group-hover:-translate-y-[180%] group-hover:skew-y-[13.7deg]">
+    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+  </div>
+
+  {/* Animated-in state */}
+  <div className="absolute top-0 translate-y-[220%] skew-y-[14.5deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+  </div>
+</div>
+
+  {/* Right side static text */}
+  <div className="uppercase text-[0.6rem] font-semibold text-darkneutral -space-y-2">
+    <p>a bit about me and</p>
+    <p>how can i support you</p>
+  </div>
+</div>
+
             </div>
             {/* Thin border line */}
             <div className="absolute bottom-0 left-0 w-full border-t border-black scale-y-[0.2]"></div>

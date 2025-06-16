@@ -12,8 +12,18 @@ function ProjectsI9Intro  ()  {
           <div className='relative h-[190px]'>
             <div className="absolute bottom-2 left-24">
               <GoArrowDownRight className="text-brightred mb-2" />
-              <div className="flex flex-row text-brightred font-madefor text-sm gap-[36.1rem] text-[0.8rem]">
-                <p className="cursor-pointer">onethsayakkara@gmail.com</p>
+              <div className="flex flex-row text-brightred font-madefor text-sm gap-[36.1rem] text-[0.8rem] group">
+                 <div className="relative h-[20px] overflow-hidden group">
+  {/* Default state */}
+  <div className="transition duration-500 group-hover:-translate-y-[180%] group-hover:skew-y-[13.7deg]">
+    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+  </div>
+
+  {/* Animated-in state */}
+  <div className="absolute top-0 translate-y-[220%] skew-y-[14.5deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+  </div>
+</div>
                 <div className="uppercase text-[0.6rem] font-semibold text-darkneutral -space-y-2">
                   <p>creating next level</p>
                   <p>digital products</p>

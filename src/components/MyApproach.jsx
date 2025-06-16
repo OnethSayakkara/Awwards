@@ -16,11 +16,25 @@ function MyApproach  ()  {
         <p>A fast, accessible site isn’t a bonus — it’s the baseline. I try to make sure what I build loads fast, works on all devices, and feels good for everyone who uses it. Every project’s different. Sometimes I’m more focused on design systems and patterns, other times it's about shipping features fast. I'm comfortable adapting to what the project needs.</p>
 
         </div>
-        <div className='absolute flex flex-row left-28 bottom-5 text-brightred  justify-between uppercase font-madefor'>
-            <IoIosArrowRoundForward className='text-4xl'/>
-            
-        </div>
-        <p className='absolute text-2xl right-24 text-brightred uppercase bottom-5'>see my work</p>
+        <div className="absolute bottom-5 left-28 right-24 flex justify-between items-center group cursor-pointer">
+  {/* Rotating arrow */}
+  <IoIosArrowRoundForward className="text-4xl text-brightred transition-transform duration-500 group-hover:-rotate-[45deg]" />
+
+  {/* Animated text */}
+  <div className="relative h-[30px] overflow-hidden text-2xl uppercase text-brightred">
+    {/* Top Text */}
+    <div className="transition duration-500 group-hover:-translate-y-[170%] group-hover:skew-y-[20deg]">
+      <p>see my work</p>
+    </div>
+
+    {/* Sliding-in Text */}
+    <div className="absolute top-0 translate-y-[170%] skew-y-[20deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+      <p>see my work</p>
+    </div>
+  </div>
+</div>
+
+
 
 
         <div className="absolute bottom-0 left-0 w-full border-t border-black scale-y-[0.2]"/>
