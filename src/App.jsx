@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { Route, Routes } from 'react-router-dom';
 import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
+import ResourcesSection from './components/ResourcesSection';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,14 +61,8 @@ function App() {
       </main>}/>
       <Route path='/about' element={<AboutSection/>}/>
 
-      <Route path='/projects' element={
-        <div>
-         <ProjectSection/>
-
-
-
-        </div>
-      }/>
+      <Route path='/projects' element={<ProjectSection/>}/>
+      <Route path='/resource' element={<ResourcesSection/>}/>
       
       </Routes>
     </div>
