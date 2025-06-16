@@ -1,12 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { PiStarFourFill } from "react-icons/pi";
 
+
 const images = [
-  '/src/assets/img/1.png',
-  '/src/assets/img/2.png',
-  '/src/assets/img/3.png',
-  '/src/assets/img/4.png',
-  '/src/assets/img/5.png',
+  '/1.png',
+  '/2.png',
+  '/3.png',
+  '/4.png',
+  '/5.png',
 ];
 
 export default function InfiniteImageSlider() {
