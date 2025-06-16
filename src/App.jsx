@@ -5,24 +5,8 @@ import Hero from './components/Hero';
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Route, Routes } from 'react-router-dom';
-import Aboutme from './components/Aboutme';
-import Whoami from './components/Whoami';
-import Motherland from './components/Motherland';
-import BannerTwo from './components/BannerTwo';
-import MyApproach from './components/MyApproach';
-import BannerThree from './components/BannerThree';
-import BeyondtheScreen from './components/BeyondtheScreen';
-import BannerFour from './components/BannerFour';
-import Footer from './components/Footer';
-import ProjectsI9Intro from './components/ProjectsI9Intro';
-import ImageSlider from './components/ImageSlider';
-import BannerFive from './components/BannerFive';
-import ProjectsectionTwo from './components/ProjectsectionTwo';
-import BannerRemake from './components/BannerRemake';
-import { IoIosArrowRoundForward } from 'react-icons/io';
-import { LuPackageOpen } from "react-icons/lu";
-import ProjectSectionThree from './components/ProjectSectionThree';
 import AboutSection from './components/AboutSection';
+import ProjectSection from './components/ProjectSection';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,21 +62,7 @@ function App() {
 
       <Route path='/projects' element={
         <div>
-          <Header/>
-          <ProjectsI9Intro/>
-          <ImageSlider/>
-          <BannerFive/>
-          <ProjectsectionTwo/>
-          <BannerRemake text="full package"
-          footerText="start to launch"
-          footerLeft={IoIosArrowRoundForward}
-          direction="left"
-          topIcon={LuPackageOpen}
-          />
-          <ProjectSectionThree/>
-          <BannerFour/>
-        <Footer/>
-
+         <ProjectSection/>
 
 
 

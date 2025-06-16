@@ -2,16 +2,15 @@ import React from 'react'
 import Aboutme from './Aboutme';
 import Whoami from './Whoami';
 import Motherland from './Motherland';
-import BannerTwo from './BannerTwo';
 import MyApproach from './MyApproach';
-import BannerThree from './BannerThree';
 import BeyondtheScreen from './BeyondtheScreen';
 import Header from './Header';
-import BannerFour from './BannerFour';
 import Footer from './Footer';
 import BannerRemake from './BannerRemake';
 import { RiSettings5Fill } from "react-icons/ri";
 import { BiSolidLeaf } from "react-icons/bi";
+import { RiMessage2Fill } from "react-icons/ri";
+import { HiOutlineLink } from "react-icons/hi";
 
  function AboutSection  ()  {
   return (
@@ -20,7 +19,6 @@ import { BiSolidLeaf } from "react-icons/bi";
         <Aboutme/>
         <Whoami/>
         <Motherland/>
-        <BannerTwo/>
         <BannerRemake text="the process"
           footerText="my apporach"
           footerLeft="2"
@@ -30,14 +28,21 @@ import { BiSolidLeaf } from "react-icons/bi";
           />
         <MyApproach/>
         <BannerRemake text="touching grass"
-          footerText=" beyond the screen"
+          footerText="beyond the screen"
           footerLeft="3"
           direction="left"
           isnumber="yes"
           topIcon={BiSolidLeaf}
           />
         <BeyondtheScreen/>
-        <BannerFour/>
+        <BannerRemake text="let's connect"
+          footerText="let's make awesome happen"
+          footerLeft={HiOutlineLink}
+          direction="right"
+          isnumber="no"
+           isprojecticon = "no" 
+          topIcon={RiMessage2Fill}
+          />
         <Footer/>
     </div>
   )
