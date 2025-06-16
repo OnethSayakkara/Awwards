@@ -16,12 +16,12 @@ function ProjectsI9Intro  ()  {
                  <div className="relative h-[20px] overflow-hidden group">
   {/* Default state */}
   <div className="transition duration-500 group-hover:-translate-y-[180%] group-hover:skew-y-[13.7deg]">
-    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+   <a href="mailto:onethsayakkara@gmail.com" className="cursor-pointer text-brightred">onethsayakkara@gmail.com</a>
   </div>
 
   {/* Animated-in state */}
   <div className="absolute top-0 translate-y-[220%] skew-y-[14.5deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-    <p className="cursor-pointer text-brightred">onethsayakkara@gmail.com</p>
+   <a href="mailto:onethsayakkara@gmail.com" className="cursor-pointer text-brightred">onethsayakkara@gmail.com</a>
   </div>
 </div>
                 <div className="uppercase text-[0.6rem] font-semibold text-darkneutral -space-y-2">

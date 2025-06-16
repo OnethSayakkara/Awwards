@@ -1,6 +1,7 @@
 import React from 'react'
 import loadingAnimation from '../assets/animations/a2.json';
 import Lottie from 'lottie-react';
+import Button from './Button';
 
 function Hero  () {
   return (
@@ -13,7 +14,7 @@ function Hero  () {
         <p className='font-madefor text-5xl'>Hello, my name is Oneth Vindima.<br/>I'm a <span className='text-brightred'>Web Development Engineer</span><br/>based in Galle, Sri Lanka.</p>
         <div className=' flex flex-row'>
         <div>
-        <button className='mt-14 font-medium font-madefor text-white bg-darkgray py-2 px-7 rounded-full'>Get in touch</button>
+        <Button title="Get in touch" containerClass="mt-14 font-medium font-madefor text-white bg-darkgray py-2 px-7 rounded-full" />
         </div>
          <div>
       <Lottie animationData={loadingAnimation} loop={true}  className="w-[350px] -mt-11 ml-[500px]" />
