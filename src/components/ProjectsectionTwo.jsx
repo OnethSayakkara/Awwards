@@ -22,12 +22,12 @@ const ProjectsectionTwo = () => {
                   <div className="relative h-[30px] overflow-hidden text-2xl uppercase text-brightred">
                     {/* Top Text */}
                     <div className="transition duration-500 group-hover:-translate-y-[170%] group-hover:skew-y-[20deg]">
-                      <p>contact</p>
+                       <a href="mailto:onethsayakkara@gmail.com">contact</a>
                     </div>
                 
                     {/* Sliding-in Text */}
                     <div className="absolute top-0 translate-y-[170%] skew-y-[20deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                      <p>contact</p>
+                       <a href="mailto:onethsayakkara@gmail.com">contact</a>
                     </div>
                   </div>
                 </div>

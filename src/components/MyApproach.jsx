@@ -29,7 +29,7 @@ function MyApproach  ()  {
 
     {/* Sliding-in Text */}
     <div className="absolute top-0 translate-y-[170%] skew-y-[20deg] transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-      <p>see my work</p>
+       <a href='/projects'>see my work</a>
     </div>
   </div>
 </div>
