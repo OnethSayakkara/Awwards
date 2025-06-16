@@ -60,7 +60,7 @@ function Header() {
                 {animatedLink('About,', '/about')}
               </div>
               <div className="space-x-2">
-                {animatedLink('Resources,', '#about')}
+                {animatedLink('Resources,', '/resource')}
                 {animatedLink('Contact', '#')}
               </div>
             </nav>
