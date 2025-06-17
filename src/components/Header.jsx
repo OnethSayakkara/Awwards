@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaRegCopyright } from "react-icons/fa6";
 
 function Header() {
   const animatedLink = (label, href) => {
@@ -27,7 +28,30 @@ function Header() {
         {/* Content */}
         <div className="ml-[70px] mr-[70px] flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="text-darkneutral font-bold font-madefor">Thing by Oneth</a>
+
+<div className="group inline-flex items-center gap-2 overflow-hidden">
+  {/* Rotating Icon on Hover */}
+  <FaRegCopyright
+    className="text-xs text-darkneutral mt-[1px] transition-transform duration-500 group-hover:rotate-[360deg]"
+  />
+
+  {/* Animated Text */}
+  <a
+    href="/"
+    className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor"
+  >
+    {/* Default Text */}
+    <span className="absolute left-0 top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+      Thing by Oneth
+    </span>
+
+    {/* Hover Text */}
+    <span className="absolute left-full top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+      Oneth Vindima
+    </span>
+  </a>
+</div>
+
 
           <div className="flex flex-row gap-28">
             {/* Status */}
