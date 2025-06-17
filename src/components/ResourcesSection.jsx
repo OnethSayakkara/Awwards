@@ -63,7 +63,7 @@ const ResourcesSection = () => {
                   <BannerRemake text="let's connect"
           footerText="let's make awesome happen"
           footerLeft={HiOutlineLink}
-          direction="right"
+          direction="left"
           isnumber="no"
            isprojecticon = "no" 
           topIcon={RiMessage2Fill}
