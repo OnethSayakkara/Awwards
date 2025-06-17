@@ -5,8 +5,6 @@ function Header() {
   const animatedLink = (label, href) => {
     const isExternal = href.startsWith('http');
 
-    
-
     return (
       <a
         href={href}
@@ -20,19 +18,31 @@ function Header() {
     );
   };
 
-  const iconRef = useRef(null);
+  const logoRef = useRef(null);
 
   const handleMouseMove = (e) => {
-    const icon = iconRef.current;
-    const rect = icon.getBoundingClientRect();
+    const logo = logoRef.current;
+    const rect = logo.getBoundingClientRect();
+
+    // Distance from center of logo block to mouse
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
 
-    icon.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    // Move logo toward cursor slightly
+    logo.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
   };
 
   const handleMouseLeave = () => {
-    iconRef.current.style.transform = 'translate(0px, 0px)';
+    const logo = logoRef.current;
+
+    // Reset with a bounce effect
+    logo.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    logo.style.transform = 'translate(0px, 0px)';
+
+    // Remove the bounce transition after it's done so hover stays snappy
+    setTimeout(() => {
+      logo.style.transition = '';
+    }, 500);
   };
 
   return (
@@ -47,20 +57,15 @@ function Header() {
           {/* Logo */}
 
 <div
-      className="inline-flex items-center gap-2 overflow-hidden group"
+      ref={logoRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      className="inline-flex items-center gap-2 cursor-pointer"
     >
-      {/* Magnetic Icon */}
-      <FaRegCopyright
-        ref={iconRef}
-        className="text-xs text-darkneutral mt-[1px] transition-transform duration-300 ease-out"
-      />
-
-      {/* Animated Text */}
+      <FaRegCopyright className="text-xs text-darkneutral mt-[1px]" />
       <a
         href="/"
-        className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor"
+        className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor overflow-hidden"
       >
         {/* Default Text */}
         <span className="absolute left-0 top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
