@@ -10,17 +10,20 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import ResourcesSectionfour from './ResourcesSectionfour';
 import ResourceCard from './ResourceCard';
+import { RiMessage2Fill } from "react-icons/ri";
+import { HiOutlineLink } from "react-icons/hi";
+import Footer from './Footer';
+
 
 const ResourcesSection = () => {
   const resources = [
-    { title: 'Display Local Time', level: 'Beginner', date: 'May 20th' },
-    { title: 'Light/Dark Switch', level: 'Intermediate', date: 'May 27th' },
-    { title: 'CSS Menu Animation', level: 'Beginner', date: 'June 3rd' },
-    { title: 'Responsive Nav Bar', level: 'Intermediate', date: 'June 10th' },
-    { title: 'Scroll Animation', level: 'Intermediate', date: 'June 17th' },
-    { title: 'Gradient Button Hover', level: 'Beginner', date: 'June 24th' },
-    { title: 'Custom Cursor Effect', level: 'Intermediate', date: 'July 1st' },
-    { title: 'GSAP Slide Reveal', level: 'Advanced', date: 'July 8th' },
+    { title: 'Display Local Time', level: 'Beginner',topic: 'utilities & scripts - may 20th', link:'/code1.png',sitelink: 'https://codepen.io/OnethSayakkara/pen/yyNqGdm' },
+    { title: 'Light / Dark Switch', level: 'Intermediate',topic: 'utilities & scripts - may 27th', link:'/code2.png' },
+    { title: 'CSS Menu Animation', level: 'Beginner',topic: 'buttons - june 3rd', link:'/code3.png' },
+    { title: 'scroll direction', level: 'advanced',topic: 'marquees - june 10th', link:'/code4.png' },
+    { topic: 'coming up june 20th. .' },
+    { topic: 'coming up july 25th. .'},
+    { topic: 'coming up july 30th. .'},
   ];
 
   return (
@@ -55,6 +58,15 @@ const ResourcesSection = () => {
           <ResourceCard key={idx} {...res} index={idx} />
         ))}
       </div>
+                  <BannerRemake text="let's connect"
+          footerText="let's make awesome happen"
+          footerLeft={HiOutlineLink}
+          direction="right"
+          isnumber="no"
+           isprojecticon = "no" 
+          topIcon={RiMessage2Fill}
+          />
+        <Footer/>
     </div>
   );
 };

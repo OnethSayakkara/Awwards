@@ -3,7 +3,7 @@ import React from 'react';
 function ResourcesSectionfour() {
   return (
     <section>
-      <div className='relative h-[240px] '>
+      <div className='relative h-[190px] '>
         {/* Vertical border lines */}
         <div className="absolute left-[55px] top-0 h-full w-px bg-black scale-x-[0.2]" />
         <div className="absolute left-[75px] top-0 h-full w-px bg-black scale-x-[0.2]" />
