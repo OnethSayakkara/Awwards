@@ -88,7 +88,7 @@ const ResourceCard = ({ title, level, index, topic, link, sitelink }) => {
                     href={sitelink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brightred font-medium text-[0.7rem] mt-14 cursor-pointer inline-block hover:underline"
+                    className="text-brightred font-[549] text-[0.7rem] mt-14 cursor-pointer inline-block hover:underline"
                   >
                     Get on CodePen
                   </a>
