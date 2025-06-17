@@ -56,13 +56,14 @@ function Header() {
         <div className="ml-[70px] mr-[70px] flex items-center justify-between">
           {/* Logo */}
 
-<div
-      ref={logoRef}
+ <div
+      className="group inline-flex items-center gap-2 cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="inline-flex items-center gap-2 cursor-pointer"
+      ref={logoRef}
     >
-      <FaRegCopyright className="text-xs text-darkneutral mt-[1px]" />
+      <FaRegCopyright className="text-xs text-darkneutral mt-[1px] transition-transform duration-500 group-hover:rotate-[360deg]" />
+      
       <a
         href="/"
         className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor overflow-hidden"
