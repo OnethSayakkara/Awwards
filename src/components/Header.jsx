@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaRegCopyright } from "react-icons/fa6";
 
 function Header() {
   const animatedLink = (label, href) => {
     const isExternal = href.startsWith('http');
+
+    
 
     return (
       <a
@@ -18,6 +20,21 @@ function Header() {
     );
   };
 
+  const iconRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const icon = iconRef.current;
+    const rect = icon.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    icon.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  };
+
+  const handleMouseLeave = () => {
+    iconRef.current.style.transform = 'translate(0px, 0px)';
+  };
+
   return (
     <section>
       <div className="relative h-auto p-5">
@@ -29,28 +46,34 @@ function Header() {
         <div className="ml-[70px] mr-[70px] flex items-center justify-between">
           {/* Logo */}
 
-<div className="group inline-flex items-center gap-2 overflow-hidden">
-  {/* Rotating Icon on Hover */}
-  <FaRegCopyright
-    className="text-xs text-darkneutral mt-[1px] transition-transform duration-500 group-hover:rotate-[360deg]"
-  />
+<div
+      className="inline-flex items-center gap-2 overflow-hidden group"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Magnetic Icon */}
+      <FaRegCopyright
+        ref={iconRef}
+        className="text-xs text-darkneutral mt-[1px] transition-transform duration-300 ease-out"
+      />
 
-  {/* Animated Text */}
-  <a
-    href="/"
-    className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor"
-  >
-    {/* Default Text */}
-    <span className="absolute left-0 top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
-      Thing by Oneth
-    </span>
+      {/* Animated Text */}
+      <a
+        href="/"
+        className="relative inline-block h-[1.3em] min-w-[150px] w-[140px] text-darkneutral font-bold font-madefor"
+      >
+        {/* Default Text */}
+        <span className="absolute left-0 top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+          Thing by Oneth
+        </span>
 
-    {/* Hover Text */}
-    <span className="absolute left-full top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
-      Oneth Vindima
-    </span>
-  </a>
-</div>
+        {/* Hover Text */}
+        <span className="absolute left-full top-0 w-full transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+          Oneth Vindima
+        </span>
+      </a>
+    </div>
+
 
 
           <div className="flex flex-row gap-28">
